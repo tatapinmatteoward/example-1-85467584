@@ -1,0 +1,121 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Elite Casino Insider - Your Trusted Guide to Premium Casino Gaming" description="Discover the ultimate resource for sophisticated casino gaming insights, expert strategies, and exclusive recommendations. Elite Casino Insider brings you curated content for discerning players seeking premium gaming experiences.">
+  
+  <!-- Hero Section -->
+  <div class="relative min-h-[90vh] flex items-center">
+    <div class="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"></div>
+    <div class="absolute inset-0 bg-[url('/hero-pattern.png')] opacity-10"></div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+          Elite Casino Insider
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-300 mb-8">Your journey into premium casino gaming starts here</p>
+        <div class="flex justify-center gap-4">
+          <a href="#services" class="px-8 py-3 bg-primary hover:bg-primary/90 text-black font-semibold rounded-full transition">
+            Explore Services
+          </a>
+          <a href="#about" class="px-8 py-3 border-2 border-primary text-primary hover:bg-primary/10 font-semibold rounded-full transition">
+            Learn More
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features Grid -->
+  <section class="bg-black py-20">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-16">What Sets Us Apart</h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {[
+          {
+            title: "Expert Analysis",
+            desc: "In-depth reviews from seasoned gaming professionals",
+            icon: "📊"
+          },
+          {
+            title: "Exclusive Access",
+            desc: "VIP offerings and premium gaming opportunities",
+            icon: "🎯"
+          },
+          {
+            title: "Trusted Insights",
+            desc: "Reliable strategies and insider knowledge",
+            icon: "💎"
+          },
+          {
+            title: "Premium Focus",
+            desc: "Coverage of only the most prestigious venues",
+            icon: "👑"
+          }
+        ].map(feature => (
+          <div class="bg-gradient-to-br from-gray-900 to-black p-6 rounded-xl border border-primary/20 hover:border-primary/40 transition group">
+            <div class="text-4xl mb-4">{feature.icon}</div>
+            <h3 class="text-xl font-bold text-primary mb-2">{feature.title}</h3>
+            <p class="text-gray-400 group-hover:text-gray-300 transition">{feature.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="bg-gradient-to-br from-gray-900 via-black to-gray-900 py-20">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-16">Our Premium Services</h2>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <!-- Strategic Gaming Guides -->
+        <div class="bg-black/50 backdrop-blur-sm p-8 rounded-2xl border border-primary/20">
+          <h3 class="text-2xl font-bold text-primary mb-6">Strategic Gaming Guides</h3>
+          <ul class="space-y-4">
+            {[
+              "Advanced Blackjack Strategies",
+              "Professional Poker Techniques", 
+              "High-Stakes Baccarat Mastery",
+              "Elite Roulette Systems"
+            ].map(item => (
+              <li class="flex items-center gap-3 text-gray-300">
+                <span class="h-2 w-2 rounded-full bg-accent"></span>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- VIP Casino Reviews -->
+        <div class="bg-black/50 backdrop-blur-sm p-8 rounded-2xl border border-primary/20">
+          <h3 class="text-2xl font-bold text-primary mb-6">VIP Casino Reviews</h3>
+          <p class="text-gray-300 leading-relaxed">
+            Explore exclusive insights into the world's most prestigious gaming establishments. Our detailed reviews cover everything from amenities to atmosphere, helping you make informed decisions about your next premium gaming destination.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="relative py-20">
+    <div class="absolute inset-0 bg-accent/10"></div>
+    <div class="container mx-auto px-4 relative">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+          Ready to Elevate Your Gaming Experience?
+        </h2>
+        <p class="text-gray-300 mb-8">
+          Join Elite Casino Insider today and gain access to our premium insights and exclusive offers.
+        </p>
+        <a href="/join" class="inline-block px-8 py-3 bg-primary hover:bg-primary/90 text-black font-semibold rounded-full transition">
+          Join Now
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
